@@ -4,16 +4,18 @@ import {
     UserButton,
     useOrganization,
   } from "@clerk/nextjs";import React from 'react'
+import SearchInput from "../serach-input";
+import { InviteButton } from "../invite-button";
 
 function Navbar() {
     const { organization } = useOrganization();
 
   return (
-    <div className='className="flex items-center gap-x-4 p-5"'>
+    <div className='flex items-center gap-x-4 p-5  border-b-2  border-blue-100'>
       <div className="hidden lg:flex lg:flex-1">
-        {/* <SearchInput /> */}
+        <SearchInput />
       </div>
-      <div className="block lg:hidden flex-1">
+      <div className="block lg:hidden flex-1 ">
         <OrganizationSwitcher
           hidePersonal
           appearance={{
